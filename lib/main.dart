@@ -78,7 +78,10 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+          style: const TextStyle(fontFamily: "Benton-sans"),
+        ),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -102,6 +105,35 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const Text(
               'You have pushed the button this many times:',
+            ),
+            const Text(
+              'The future is in our hands to shape. ',
+              style: TextStyle(
+                  fontFamily: "Benton-sans", fontWeight: FontWeight.w400),
+            ),
+            const Text(
+              'The future is in our hands to shape. ',
+              style: TextStyle(
+                  fontFamily: "Benton-sans", fontWeight: FontWeight.w500),
+            ),
+            const Text(
+              'The future is in our hands to shape. ',
+              style: TextStyle(
+                  fontFamily: "Benton-sans",
+                  fontWeight: FontWeight.w600,
+                  fontSize: 32),
+            ),
+            const Text(
+              'The future is in our hands to shape. ',
+              style: TextStyle(
+                  fontFamily: "Benton-sans", fontWeight: FontWeight.w700),
+            ),
+            const Text(
+              'The future is in our hands to shape. ',
+              style: TextStyle(
+                  fontFamily: "Benton-sans",
+                  fontWeight: FontWeight.w900,
+                  fontSize: 64),
             ),
             Text(
               '$_counter',
