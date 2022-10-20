@@ -53,6 +53,8 @@ dev_dependencies:
 flutter_native_splash:
   background_image: assets/splash/pattern.png
   image: assets/splash/logo.png
+  image_dark: assets/splash/logo.png
+  background_image_dark: assets/splash/onboarding_dark.png
   
 # The following section is specific to Flutter packages.
 flutter:
