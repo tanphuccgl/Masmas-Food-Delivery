@@ -35,8 +35,16 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_native_splash: ^2.2.11
+  equatable: ^2.0.5
+  flutter_bloc: ^8.1.1
+  auto_route: ^5.0.2
+  get_it: ^7.2.0
+  
 
 dev_dependencies:
+
+  auto_route_generator: ^5.0.3
+  build_runner: ^2.3.2
   flutter_test:
     sdk: flutter
 
@@ -68,6 +76,7 @@ flutter:
   assets:
     - assets/
     - assets/splash/
+    - assets/onboarding/
     - assets/fonts/
 
   fonts:
