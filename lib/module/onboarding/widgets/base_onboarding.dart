@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:masmas_food/config/constants/images.dart';
 import 'package:masmas_food/config/constants/screen.dart';
+import 'package:masmas_food/theme/colors.dart';
 import 'package:masmas_food/theme/styles.dart';
 import 'package:masmas_food/theme/themes.dart';
 import 'package:masmas_food/widgets/button.dart';
@@ -26,18 +27,23 @@ class BaseOnboarding extends StatelessWidget {
           children: [
             SizedBox(
               height: 434,
-              child: Image.asset(
-                  XTheme.isDarkMode == false
-                      ? isFirstTab
+              child: context.isDarkMode == false
+                  ? Image.asset(
+                      isFirstTab
                           ? XImages.onBoardingLight1
-                          : XImages.onBoardingLight2
-                      : isFirstTab
+                          : XImages.onBoardingLight2,
+                      fit: BoxFit.cover)
+                  : Image.asset(
+                      isFirstTab
                           ? XImages.onBoardingDark1
                           : XImages.onBoardingDark2,
-                  fit: BoxFit.cover),
+                      fit: BoxFit.cover),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: (XScreens.width * 0.2)),
+              padding: EdgeInsets.symmetric(
+                  horizontal: isFirstTab
+                      ? (XScreens.width * 0.2)
+                      : (XScreens.width * 0.18)),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -46,14 +52,20 @@ class BaseOnboarding extends StatelessWidget {
                           ? 'Find your  Comfort Food here'
                           : 'Food Ninja is Where Your Comfort Food Lives',
                       textAlign: TextAlign.center,
-                      style: XStyles.title),
+                      style: XStyles.title.copyWith(
+                          color: context.isDarkMode
+                              ? XColors.white
+                              : XColors.black)),
                   const SizedBox(height: 20),
                   Text(
                       isFirstTab
                           ? 'Here You Can find a chef or dish for every taste and color. Enjoy!'
                           : 'Enjoy a fast and smooth food delivery at your doorstep',
                       textAlign: TextAlign.center,
-                      style: XStyles.subTitle)
+                      style: XStyles.subTitle.copyWith(
+                          color: context.isDarkMode
+                              ? XColors.white
+                              : XColors.black))
                 ],
               ),
             ),

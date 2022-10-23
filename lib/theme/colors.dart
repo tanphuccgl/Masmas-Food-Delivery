@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class XColors {
   static const white = Color(0xffE5E5E5);
-
   static const black = Color(0xFF000000);
+  static const smokyBlack = Color(0xFF0D0D0D);
   static const richBlack = Color(0xFF181C05);
 
   static const linear = LinearGradient(

@@ -17,16 +17,30 @@ class XStyles {
 
 // https://api.flutter.dev/flutter/material/TextTheme-class.html
   static TextTheme get textTheme {
-    final textTheme = TextTheme(
+    final textTheme = const TextTheme(
       // input style
-      titleSmall: title,
       subtitle1: subTitle,
-
-      button: const TextStyle(
+      headline1: title,
+      button: TextStyle(
           fontSize: 16, fontWeight: FontWeight.w400, color: XColors.white),
     ).apply(
       bodyColor: XColors.black,
       displayColor: XColors.black,
+    );
+    return textTheme;
+  }
+
+  static TextTheme get textThemeDark {
+    final textTheme = const TextTheme(
+      // input style
+      headline1: title,
+      subtitle1: subTitle,
+
+      button: TextStyle(
+          fontSize: 16, fontWeight: FontWeight.w400, color: XColors.white),
+    ).apply(
+      bodyColor: XColors.white,
+      displayColor: XColors.white,
     );
     return textTheme;
   }
