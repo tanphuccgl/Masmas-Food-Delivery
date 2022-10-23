@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:masmas_food/config/constants/images.dart';
 import 'package:masmas_food/config/constants/screen.dart';
+import 'package:masmas_food/module/onboarding/logic/onboarding_bloc.dart';
 import 'package:masmas_food/theme/colors.dart';
 import 'package:masmas_food/theme/styles.dart';
 import 'package:masmas_food/theme/themes.dart';
@@ -72,7 +74,9 @@ class BaseOnboarding extends StatelessWidget {
             XButton(
               label: 'Next',
               width: 157,
-              onPressed: () {},
+              onPressed: isFirstTab
+                  ? () => context.read<OnboardingBloc>().onBtnNext()
+                  : () {},
             )
           ],
         ),
