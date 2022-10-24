@@ -54,20 +54,14 @@ class BaseOnboarding extends StatelessWidget {
                           ? 'Find your  Comfort Food here'
                           : 'Food Ninja is Where Your Comfort Food Lives',
                       textAlign: TextAlign.center,
-                      style: XStyles.title.copyWith(
-                          color: context.isDarkMode
-                              ? XColors.white
-                              : XColors.black)),
+                      style: XStyles.title),
                   const SizedBox(height: 20),
                   Text(
                       isFirstTab
                           ? 'Here You Can find a chef or dish for every taste and color. Enjoy!'
                           : 'Enjoy a fast and smooth food delivery at your doorstep',
                       textAlign: TextAlign.center,
-                      style: XStyles.subTitle.copyWith(
-                          color: context.isDarkMode
-                              ? XColors.white
-                              : XColors.black))
+                      style: XStyles.subTitle)
                 ],
               ),
             ),
