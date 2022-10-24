@@ -16,4 +16,8 @@ class XImages {
   static const String logoDark = "${pathImage}logo_dark.png";
   static const String backgroundDark1 = "${pathImage}background_dark_1.png";
   static const String backgroundDark2 = "${pathImage}background_dark_2.png";
+
+  // Icon
+  static const String google = "${pathImage}ic_google.png";
+  static const String facebook = "${pathImage}ic_facebook.png";
 }
