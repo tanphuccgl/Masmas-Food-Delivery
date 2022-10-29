@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:masmas_food/config/constants/images.dart';
+import 'package:masmas_food/config/constants/screen.dart';
 import 'package:masmas_food/theme/themes.dart';
 
 class BaseScaffold extends StatelessWidget {
@@ -13,6 +14,8 @@ class BaseScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        width: XScreens.width,
+        height: XScreens.height,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: context.isDarkMode == false

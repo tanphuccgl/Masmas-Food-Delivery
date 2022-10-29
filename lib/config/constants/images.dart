@@ -20,4 +20,11 @@ class XImages {
   // Icon
   static const String google = "${pathImage}ic_google.png";
   static const String facebook = "${pathImage}ic_facebook.png";
+
+  // Input
+  static const String profile = "${pathImage}ic_profile.png";
+  static const String email = "${pathImage}ic_message.png";
+  static const String lock = "${pathImage}ic_lock.png";
+  static const String hidePassword = "${pathImage}ic_show_pw.png";
+  static const String showPassword = "${pathImage}ic_hide_pw.png";
 }

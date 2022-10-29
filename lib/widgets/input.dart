@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:masmas_food/config/constants/images.dart';
 import 'package:masmas_food/theme/colors.dart';
 import 'package:masmas_food/theme/styles.dart';
 import 'package:masmas_food/theme/themes.dart';
+import 'package:masmas_food/theme/ui_helper.dart';
 
 class XInput extends StatefulWidget {
   final String hint;
@@ -11,12 +13,14 @@ class XInput extends StatefulWidget {
   final String errorText;
   final String value;
   final bool isAction;
+  final String? prefixIconAssest;
   const XInput(
       {Key? key,
       required this.value,
       required this.hint,
       required this.onChanged,
       required this.errorText,
+      this.prefixIconAssest,
       this.isAction = true,
       this.obscureText = false,
       this.textInputType = TextInputType.text})
@@ -55,19 +59,18 @@ class _XInputState extends State<XInput> {
     final List<Widget> actions = [];
 
     if (widget.obscureText && widget.isAction) {
-      // actions.add(
-      //   IconButton(
-      //     icon: Icon(
-      //       obscureText ? Icons.visibility : Icons.visibility_off,
-      //       color: MyColors.colorGray,
-      //     ),
-      //     onPressed: () {
-      //       setState(() {
-      //         obscureText = !obscureText;
-      //       });
-      //     },
-      //   ),
-      // );
+      actions.add(
+        IconButton(
+          padding: EdgeInsets.zero,
+          icon: Image.asset(
+              obscureText ? XImages.hidePassword : XImages.showPassword),
+          onPressed: () {
+            setState(() {
+              obscureText = !obscureText;
+            });
+          },
+        ),
+      );
     }
     if (actions.isEmpty) {
       return null;
@@ -84,14 +87,8 @@ class _XInputState extends State<XInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 57,
-      decoration: BoxDecoration(
-          color: context.isDarkMode ? XColors.raisinBlack : XColors.white,
-          borderRadius: BorderRadius.circular(15.0),
-          border: context.isDarkMode
-              ? null
-              : Border.all(width: 1.0, color: XColors.cultured),
-          boxShadow: context.isDarkMode ? null : XStyles.shadow),
+      decoration:
+          BoxDecoration(boxShadow: context.isDarkMode ? null : XStyles.shadow),
       child: TextField(
         style: XStyles.subTitle.copyWith(
             fontSize: 14,
@@ -100,28 +97,40 @@ class _XInputState extends State<XInput> {
         controller: _controller,
         onChanged: widget.onChanged,
         decoration: InputDecoration(
-            suffixIcon: _buildAction(),
-            errorText: widget.errorText,
-            errorStyle: const TextStyle(
-              fontWeight: FontWeight.w500,
-            ),
-            enabledBorder: const OutlineInputBorder(
-              borderSide: BorderSide(width: 1, color: XColors.cultured),
-            ),
-            border: InputBorder.none,
-            hintText: widget.hint,
-            labelStyle: XStyles.subTitle.copyWith(
-                fontSize: 14,
-                color: context.isDarkMode
-                    ? XColors.graniteGray
-                    : XColors.blackOlive),
-            hintStyle: XStyles.subTitle.copyWith(
-                fontSize: 14,
-                color: context.isDarkMode
-                    ? XColors.graniteGray
-                    : XColors.blackOlive),
-            fillColor: XColors.white,
-            contentPadding: const EdgeInsets.symmetric(horizontal: 28)),
+          suffixIcon: _buildAction(),
+          constraints: const BoxConstraints(minHeight: 57),
+          prefixIcon: widget.prefixIconAssest != null
+              ? Image.asset(
+                  widget.prefixIconAssest!,
+                  width: 24,
+                  height: 24,
+                )
+              : null,
+          errorText: widget.errorText,
+          filled: true,
+          errorStyle: const TextStyle(
+            fontWeight: FontWeight.w500,
+          ),
+          enabledBorder: UIHelper.boderInput(context),
+          focusedBorder: UIHelper.boderInput(context),
+          errorBorder: UIHelper.boderInput(context),
+          focusedErrorBorder: UIHelper.boderInput(context),
+          disabledBorder: UIHelper.boderInput(context),
+          border: UIHelper.boderInput(context),
+          hintText: widget.hint,
+          fillColor: context.isDarkMode ? XColors.raisinBlack : XColors.white,
+          labelStyle: XStyles.subTitle.copyWith(
+              fontSize: 14,
+              color: context.isDarkMode
+                  ? XColors.graniteGray
+                  : XColors.blackOlive),
+          hintStyle: XStyles.subTitle.copyWith(
+              fontSize: 14,
+              color: context.isDarkMode
+                  ? XColors.graniteGray
+                  : XColors.blackOlive),
+          contentPadding: const EdgeInsets.all(20),
+        ),
         keyboardType: widget.textInputType,
         maxLines: 1,
         minLines: 1,

@@ -12,18 +12,19 @@ class XColors {
   static const blackOlive = Color(0xff3B3B3B);
   static const raisinBlack = Color(0xff252525);
   static const graniteGray = Color(0xff666666);
+  static const veryLightMalachiteGreen = Color(0xff53E88B);
 
   static const linear = LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
       colors: <Color>[
-        Color(0xff53E88B),
+        veryLightMalachiteGreen,
         Color(0xff15BE77),
       ]);
 
   static final Shader shaderLinear = const LinearGradient(
     colors: <Color>[
-      Color(0xff53E88B),
+      veryLightMalachiteGreen,
       Color(0xff15BE77),
     ],
   ).createShader(const Rect.fromLTWH(0.0, 0.0, 200.0, 70.0));

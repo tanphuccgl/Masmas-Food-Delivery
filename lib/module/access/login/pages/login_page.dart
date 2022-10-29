@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:masmas_food/config/constants/images.dart';
 import 'package:masmas_food/config/constants/screen.dart';
 import 'package:masmas_food/module/access/login/widgets/button_social.dart';
+import 'package:masmas_food/module/access/widgets/text_underline.dart';
 import 'package:masmas_food/theme/colors.dart';
 import 'package:masmas_food/theme/styles.dart';
 import 'package:masmas_food/theme/themes.dart';
@@ -54,14 +55,8 @@ class LoginPage extends StatelessWidget {
               ButtonSocial(socical: AccessSocical.google)
             ],
           ),
-          Text(
-            'Forgot Your Password?',
-            style: XStyles.subTitle.copyWith(
-                decoration: TextDecoration.underline,
-                decorationThickness: 1,
-                decorationColor: const Color(0xff53E88B),
-                fontWeight: FontWeight.w400,
-                foreground: Paint()..shader = XColors.shaderLinear),
+          const TextUnderline(
+            title: 'Forgot Your Password?',
           ),
           XButton(
             label: 'Login',
