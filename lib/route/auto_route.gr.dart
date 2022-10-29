@@ -11,35 +11,36 @@
 // ignore_for_file: type=lint
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i5;
-import 'package:flutter/material.dart' as _i6;
+import 'package:auto_route/auto_route.dart' as _i6;
+import 'package:flutter/material.dart' as _i7;
 
 import '../module/access/login/pages/login_page.dart' as _i4;
+import '../module/access/register/pages/register_page.dart' as _i5;
 import '../module/access/router/access_wrapper_page.dart' as _i2;
 import '../module/onboarding/pages/onboarding_page.dart' as _i1;
 import '../module/onboarding/widgets/base_onboarding.dart' as _i3;
 
-class XRouter extends _i5.RootStackRouter {
-  XRouter([_i6.GlobalKey<_i6.NavigatorState>? navigatorKey])
+class XRouter extends _i6.RootStackRouter {
+  XRouter([_i7.GlobalKey<_i7.NavigatorState>? navigatorKey])
       : super(navigatorKey);
 
   @override
-  final Map<String, _i5.PageFactory> pagesMap = {
+  final Map<String, _i6.PageFactory> pagesMap = {
     OnboardingRoute.name: (routeData) {
-      return _i5.MaterialPageX<dynamic>(
+      return _i6.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i1.OnboardingPage(),
       );
     },
     AccessWrapperRoute.name: (routeData) {
-      return _i5.MaterialPageX<dynamic>(
+      return _i6.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i2.AccessWrapperPage(),
       );
     },
     OnboardingTab.name: (routeData) {
       final args = routeData.argsAs<OnboardingTabArgs>();
-      return _i5.MaterialPageX<dynamic>(
+      return _i6.MaterialPageX<dynamic>(
         routeData: routeData,
         child: _i3.BaseOnboarding(
           key: args.key,
@@ -48,49 +49,60 @@ class XRouter extends _i5.RootStackRouter {
       );
     },
     LoginRoute.name: (routeData) {
-      return _i5.MaterialPageX<dynamic>(
+      return _i6.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i4.LoginPage(),
+      );
+    },
+    RegisterRoute.name: (routeData) {
+      return _i6.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i5.RegisterPage(),
       );
     },
   };
 
   @override
-  List<_i5.RouteConfig> get routes => [
-        _i5.RouteConfig(
+  List<_i6.RouteConfig> get routes => [
+        _i6.RouteConfig(
           '/#redirect',
           path: '/',
           redirectTo: 'access',
           fullMatch: true,
         ),
-        _i5.RouteConfig(
+        _i6.RouteConfig(
           OnboardingRoute.name,
           path: '/onboarding-page',
           children: [
-            _i5.RouteConfig(
+            _i6.RouteConfig(
               OnboardingTab.name,
               path: 'onboarding',
               parent: OnboardingRoute.name,
             )
           ],
         ),
-        _i5.RouteConfig(
+        _i6.RouteConfig(
           AccessWrapperRoute.name,
           path: 'access',
           children: [
-            _i5.RouteConfig(
+            _i6.RouteConfig(
               '#redirect',
               path: '',
               parent: AccessWrapperRoute.name,
-              redirectTo: 'login',
+              redirectTo: 'register',
               fullMatch: true,
             ),
-            _i5.RouteConfig(
+            _i6.RouteConfig(
               LoginRoute.name,
               path: 'login',
               parent: AccessWrapperRoute.name,
             ),
-            _i5.RouteConfig(
+            _i6.RouteConfig(
+              RegisterRoute.name,
+              path: 'register',
+              parent: AccessWrapperRoute.name,
+            ),
+            _i6.RouteConfig(
               '*#redirect',
               path: '*',
               parent: AccessWrapperRoute.name,
@@ -99,7 +111,7 @@ class XRouter extends _i5.RootStackRouter {
             ),
           ],
         ),
-        _i5.RouteConfig(
+        _i6.RouteConfig(
           '*#redirect',
           path: '*',
           redirectTo: '',
@@ -110,8 +122,8 @@ class XRouter extends _i5.RootStackRouter {
 
 /// generated route for
 /// [_i1.OnboardingPage]
-class OnboardingRoute extends _i5.PageRouteInfo<void> {
-  const OnboardingRoute({List<_i5.PageRouteInfo>? children})
+class OnboardingRoute extends _i6.PageRouteInfo<void> {
+  const OnboardingRoute({List<_i6.PageRouteInfo>? children})
       : super(
           OnboardingRoute.name,
           path: '/onboarding-page',
@@ -123,8 +135,8 @@ class OnboardingRoute extends _i5.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.AccessWrapperPage]
-class AccessWrapperRoute extends _i5.PageRouteInfo<void> {
-  const AccessWrapperRoute({List<_i5.PageRouteInfo>? children})
+class AccessWrapperRoute extends _i6.PageRouteInfo<void> {
+  const AccessWrapperRoute({List<_i6.PageRouteInfo>? children})
       : super(
           AccessWrapperRoute.name,
           path: 'access',
@@ -136,9 +148,9 @@ class AccessWrapperRoute extends _i5.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.BaseOnboarding]
-class OnboardingTab extends _i5.PageRouteInfo<OnboardingTabArgs> {
+class OnboardingTab extends _i6.PageRouteInfo<OnboardingTabArgs> {
   OnboardingTab({
-    _i6.Key? key,
+    _i7.Key? key,
     required _i3.TabOnboarding tabOnboarding,
   }) : super(
           OnboardingTab.name,
@@ -158,7 +170,7 @@ class OnboardingTabArgs {
     required this.tabOnboarding,
   });
 
-  final _i6.Key? key;
+  final _i7.Key? key;
 
   final _i3.TabOnboarding tabOnboarding;
 
@@ -170,7 +182,7 @@ class OnboardingTabArgs {
 
 /// generated route for
 /// [_i4.LoginPage]
-class LoginRoute extends _i5.PageRouteInfo<void> {
+class LoginRoute extends _i6.PageRouteInfo<void> {
   const LoginRoute()
       : super(
           LoginRoute.name,
@@ -178,4 +190,16 @@ class LoginRoute extends _i5.PageRouteInfo<void> {
         );
 
   static const String name = 'LoginRoute';
+}
+
+/// generated route for
+/// [_i5.RegisterPage]
+class RegisterRoute extends _i6.PageRouteInfo<void> {
+  const RegisterRoute()
+      : super(
+          RegisterRoute.name,
+          path: 'register',
+        );
+
+  static const String name = 'RegisterRoute';
 }
