@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:masmas_food/module/access/forgot_password/forgot_password_page.dart';
 import 'package:masmas_food/module/access/forgot_password/select_contact/pages/select_contact_page.dart';
+import 'package:masmas_food/module/access/forgot_password/verify_code/pages/verify_code_page.dart';
 import 'package:masmas_food/module/access/login/pages/login_page.dart';
 import 'package:masmas_food/module/access/register/pages/register_page.dart';
 import 'package:masmas_food/module/access/router/access_wrapper_page.dart';
@@ -63,6 +64,11 @@ class AccessCoordinator {
                 path: ForgotPasswordRouters.selectContact,
                 page: SelectContactPage,
                 name: "SelectContactRoute",
+              ),
+              AutoRoute(
+                path: ForgotPasswordRouters.verifyCode,
+                page: VerifyCodePage,
+                name: "VerifyCodeRoute",
                 initial: true,
               ),
             ]),
