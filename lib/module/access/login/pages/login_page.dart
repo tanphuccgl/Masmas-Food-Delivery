@@ -16,55 +16,62 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
+        isRightCorner: false,
         child: Padding(
-      padding: const EdgeInsets.only(top: 47, bottom: 60, left: 25, right: 25),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(
-            height: XScreens.height * 0.26,
-            child: Image.asset(
-                context.isDarkMode ? XImages.logoDark : XImages.logoLight,
-                fit: BoxFit.cover),
-          ),
-          const SizedBox(height: 20),
-          Text(
-            'Login To Your Account',
-            style: XStyles.title.copyWith(
-                fontSize: 20,
-                color: context.isDarkMode ? XColors.white : XColors.richBlack),
-          ),
-          const SizedBox(height: 15),
-          XInput(
-              value: '', hint: 'Email', onChanged: (value) {}, errorText: ""),
-          XInput(
-              value: '',
-              hint: 'Password',
-              onChanged: (value) {},
-              errorText: ""),
-          Text(
-            'Or Continue With',
-            style: XStyles.title.copyWith(
-                fontSize: 12,
-                color: context.isDarkMode ? XColors.white : XColors.richBlack),
-          ),
-          Row(
+          padding:
+              const EdgeInsets.only(top: 47, bottom: 60, left: 25, right: 25),
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              ButtonSocial(socical: AccessSocical.facebook),
-              ButtonSocial(socical: AccessSocical.google)
+            children: [
+              SizedBox(
+                height: XScreens.height * 0.26,
+                child: Image.asset(
+                    context.isDarkMode ? XImages.logoDark : XImages.logoLight,
+                    fit: BoxFit.cover),
+              ),
+              const SizedBox(height: 20),
+              Text(
+                'Login To Your Account',
+                style: XStyles.title.copyWith(
+                    fontSize: 20,
+                    color:
+                        context.isDarkMode ? XColors.white : XColors.richBlack),
+              ),
+              const SizedBox(height: 15),
+              XInput(
+                  value: '',
+                  hint: 'Email',
+                  onChanged: (value) {},
+                  errorText: ""),
+              XInput(
+                  value: '',
+                  hint: 'Password',
+                  onChanged: (value) {},
+                  errorText: ""),
+              Text(
+                'Or Continue With',
+                style: XStyles.title.copyWith(
+                    fontSize: 12,
+                    color:
+                        context.isDarkMode ? XColors.white : XColors.richBlack),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  ButtonSocial(socical: AccessSocical.facebook),
+                  ButtonSocial(socical: AccessSocical.google)
+                ],
+              ),
+              const TextUnderline(
+                title: 'Forgot Your Password?',
+              ),
+              XButton(
+                label: 'Login',
+                width: 141,
+                onPressed: () {},
+              )
             ],
           ),
-          const TextUnderline(
-            title: 'Forgot Your Password?',
-          ),
-          XButton(
-            label: 'Login',
-            width: 141,
-            onPressed: () {},
-          )
-        ],
-      ),
-    ));
+        ));
   }
 }

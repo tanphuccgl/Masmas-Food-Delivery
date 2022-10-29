@@ -20,11 +20,11 @@ class BaseScaffold extends StatelessWidget {
           image: DecorationImage(
             image: context.isDarkMode == false
                 ? AssetImage(isRightCorner
-                    ? XImages.backgroundLight1
-                    : XImages.backgroundLight2)
+                    ? XImages.backgroundLight2
+                    : XImages.backgroundLight1)
                 : AssetImage(isRightCorner
-                    ? XImages.backgroundDark1
-                    : XImages.backgroundDark2),
+                    ? XImages.backgroundDark2
+                    : XImages.backgroundDark1),
             fit: BoxFit.cover,
           ),
         ),
