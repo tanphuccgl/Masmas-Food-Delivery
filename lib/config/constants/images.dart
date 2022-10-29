@@ -7,4 +7,17 @@ class XImages {
       "${pathOnboarding}Illustartion_dark_1.png";
   static const String onBoardingDark2 =
       "${pathOnboarding}Illustration_dark_2.png";
+
+  // Image base
+  static const String pathImage = "assets/images/";
+  static const String logoLight = "${pathImage}logo.png";
+  static const String backgroundLight1 = "${pathImage}background1.png";
+  static const String backgroundLight2 = "${pathImage}background2.png";
+  static const String logoDark = "${pathImage}logo_dark.png";
+  static const String backgroundDark1 = "${pathImage}background_dark_1.png";
+  static const String backgroundDark2 = "${pathImage}background_dark_2.png";
+
+  // Icon
+  static const String google = "${pathImage}ic_google.png";
+  static const String facebook = "${pathImage}ic_facebook.png";
 }

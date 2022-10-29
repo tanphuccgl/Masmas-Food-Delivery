@@ -57,7 +57,7 @@ class BaseOnboarding extends StatelessWidget {
                       style: XStyles.title.copyWith(
                           color: context.isDarkMode
                               ? XColors.white
-                              : XColors.black)),
+                              : XColors.richBlack)),
                   const SizedBox(height: 20),
                   Text(
                       isFirstTab
@@ -67,7 +67,7 @@ class BaseOnboarding extends StatelessWidget {
                       style: XStyles.subTitle.copyWith(
                           color: context.isDarkMode
                               ? XColors.white
-                              : XColors.black))
+                              : XColors.richBlack))
                 ],
               ),
             ),

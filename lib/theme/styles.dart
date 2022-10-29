@@ -5,7 +5,7 @@ import 'colors.dart';
 class XStyles {
   static const title = TextStyle(
     fontSize: 22,
-    color: XColors.black,
+    color: XColors.richBlack,
     fontWeight: FontWeight.w700,
   );
 
@@ -14,6 +14,18 @@ class XStyles {
     fontWeight: FontWeight.w400,
     color: XColors.black,
   );
+  static const button = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: XColors.richBlack,
+  );
+
+  static final shadow = [
+    BoxShadow(
+        blurRadius: 50,
+        color: XColors.veryLightBlue.withOpacity(.07),
+        offset: const Offset(12, 26))
+  ];
 
 // https://api.flutter.dev/flutter/material/TextTheme-class.html
   static TextTheme get textTheme {
