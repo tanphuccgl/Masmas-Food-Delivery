@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:masmas_food/module/access/forgot_password/forgot_password_page.dart';
+import 'package:masmas_food/module/access/forgot_password/forgot_success/pages/forgot_success_page.dart';
 import 'package:masmas_food/module/access/forgot_password/new_password/pages/new_password_page.dart';
 import 'package:masmas_food/module/access/forgot_password/select_contact/pages/select_contact_page.dart';
 import 'package:masmas_food/module/access/forgot_password/verify_code/pages/verify_code_page.dart';
@@ -75,6 +76,11 @@ class AccessCoordinator {
                 path: ForgotPasswordRouters.newPassword,
                 page: NewPasswordPage,
                 name: "NewPasswordRoute",
+              ),
+              AutoRoute(
+                path: ForgotPasswordRouters.success,
+                page: ForgotSuccessPage,
+                name: "ForgotSuccessRoute",
                 initial: true,
               ),
             ]),

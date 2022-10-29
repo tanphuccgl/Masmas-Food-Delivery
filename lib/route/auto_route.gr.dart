@@ -11,10 +11,12 @@
 // ignore_for_file: type=lint
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i17;
-import 'package:flutter/material.dart' as _i18;
+import 'package:auto_route/auto_route.dart' as _i18;
+import 'package:flutter/material.dart' as _i19;
 
 import '../module/access/forgot_password/forgot_password_page.dart' as _i6;
+import '../module/access/forgot_password/forgot_success/pages/forgot_success_page.dart'
+    as _i11;
 import '../module/access/forgot_password/new_password/pages/new_password_page.dart'
     as _i10;
 import '../module/access/forgot_password/select_contact/pages/select_contact_page.dart'
@@ -25,42 +27,42 @@ import '../module/access/login/pages/login_page.dart' as _i4;
 import '../module/access/register/pages/register_page.dart' as _i5;
 import '../module/access/router/access_wrapper_page.dart' as _i2;
 import '../module/access/sign_up_process/payment_method/pages/payment_method_page.dart'
-    as _i12;
+    as _i13;
 import '../module/access/sign_up_process/set_location/pages/set_location_page.dart'
-    as _i15;
+    as _i16;
 import '../module/access/sign_up_process/sign_up_process.dart' as _i7;
 import '../module/access/sign_up_process/sign_up_success/pages/sign_up_success_page.dart'
-    as _i16;
+    as _i17;
 import '../module/access/sign_up_process/upload_photo/pages/upload_photo_page.dart'
-    as _i13;
-import '../module/access/sign_up_process/upload_preview/pages/upload_preview_page.dart'
     as _i14;
+import '../module/access/sign_up_process/upload_preview/pages/upload_preview_page.dart'
+    as _i15;
 import '../module/access/sign_up_process/your_bio/pages/your_bio_page.dart'
-    as _i11;
+    as _i12;
 import '../module/onboarding/pages/onboarding_page.dart' as _i1;
 import '../module/onboarding/widgets/base_onboarding.dart' as _i3;
 
-class XRouter extends _i17.RootStackRouter {
-  XRouter([_i18.GlobalKey<_i18.NavigatorState>? navigatorKey])
+class XRouter extends _i18.RootStackRouter {
+  XRouter([_i19.GlobalKey<_i19.NavigatorState>? navigatorKey])
       : super(navigatorKey);
 
   @override
-  final Map<String, _i17.PageFactory> pagesMap = {
+  final Map<String, _i18.PageFactory> pagesMap = {
     OnboardingRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i1.OnboardingPage(),
       );
     },
     AccessWrapperRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i2.AccessWrapperPage(),
       );
     },
     OnboardingTab.name: (routeData) {
       final args = routeData.argsAs<OnboardingTabArgs>();
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
         child: _i3.BaseOnboarding(
           key: args.key,
@@ -69,199 +71,210 @@ class XRouter extends _i17.RootStackRouter {
       );
     },
     LoginRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i4.LoginPage(),
       );
     },
     RegisterRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i5.RegisterPage(),
       );
     },
     ForgotPasswordRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i6.ForgotPasswordPage(),
       );
     },
     SignUpProcessRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i7.SignUpProcessPage(),
       );
     },
     SelectContactRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i8.SelectContactPage(),
       );
     },
     VerifyCodeRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i9.VerifyCodePage(),
       );
     },
     NewPasswordRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i10.NewPasswordPage(),
       );
     },
-    YourBioRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+    ForgotSuccessRoute.name: (routeData) {
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i11.YourBioPage(),
+        child: const _i11.ForgotSuccessPage(),
+      );
+    },
+    YourBioRoute.name: (routeData) {
+      return _i18.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i12.YourBioPage(),
       );
     },
     PaymentMethodRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i12.PaymentMethodPage(),
+        child: const _i13.PaymentMethodPage(),
       );
     },
     UploadPhotoRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i13.UploadPhotoPage(),
+        child: const _i14.UploadPhotoPage(),
       );
     },
     UploadPreviewRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i14.UploadPreviewPage(),
+        child: const _i15.UploadPreviewPage(),
       );
     },
     SetLocationRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i15.SetLocationPage(),
+        child: const _i16.SetLocationPage(),
       );
     },
     SignUpSuccessRoute.name: (routeData) {
-      return _i17.MaterialPageX<dynamic>(
+      return _i18.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i16.SignUpSuccessPage(),
+        child: const _i17.SignUpSuccessPage(),
       );
     },
   };
 
   @override
-  List<_i17.RouteConfig> get routes => [
-        _i17.RouteConfig(
+  List<_i18.RouteConfig> get routes => [
+        _i18.RouteConfig(
           '/#redirect',
           path: '/',
           redirectTo: 'access',
           fullMatch: true,
         ),
-        _i17.RouteConfig(
+        _i18.RouteConfig(
           OnboardingRoute.name,
           path: '/onboarding-page',
           children: [
-            _i17.RouteConfig(
+            _i18.RouteConfig(
               OnboardingTab.name,
               path: 'onboarding',
               parent: OnboardingRoute.name,
             )
           ],
         ),
-        _i17.RouteConfig(
+        _i18.RouteConfig(
           AccessWrapperRoute.name,
           path: 'access',
           children: [
-            _i17.RouteConfig(
+            _i18.RouteConfig(
               '#redirect',
               path: '',
               parent: AccessWrapperRoute.name,
               redirectTo: 'forgot-password',
               fullMatch: true,
             ),
-            _i17.RouteConfig(
+            _i18.RouteConfig(
               LoginRoute.name,
               path: 'login',
               parent: AccessWrapperRoute.name,
             ),
-            _i17.RouteConfig(
+            _i18.RouteConfig(
               RegisterRoute.name,
               path: 'register',
               parent: AccessWrapperRoute.name,
             ),
-            _i17.RouteConfig(
+            _i18.RouteConfig(
               ForgotPasswordRoute.name,
               path: 'forgot-password',
               parent: AccessWrapperRoute.name,
               children: [
-                _i17.RouteConfig(
+                _i18.RouteConfig(
                   '#redirect',
                   path: '',
                   parent: ForgotPasswordRoute.name,
-                  redirectTo: 'new-password',
+                  redirectTo: 'success',
                   fullMatch: true,
                 ),
-                _i17.RouteConfig(
+                _i18.RouteConfig(
                   SelectContactRoute.name,
                   path: 'select-contact',
                   parent: ForgotPasswordRoute.name,
                 ),
-                _i17.RouteConfig(
+                _i18.RouteConfig(
                   VerifyCodeRoute.name,
                   path: 'verify-code',
                   parent: ForgotPasswordRoute.name,
                 ),
-                _i17.RouteConfig(
+                _i18.RouteConfig(
                   NewPasswordRoute.name,
                   path: 'new-password',
                   parent: ForgotPasswordRoute.name,
                 ),
+                _i18.RouteConfig(
+                  ForgotSuccessRoute.name,
+                  path: 'success',
+                  parent: ForgotPasswordRoute.name,
+                ),
               ],
             ),
-            _i17.RouteConfig(
+            _i18.RouteConfig(
               SignUpProcessRoute.name,
               path: 'sign-up-process',
               parent: AccessWrapperRoute.name,
               children: [
-                _i17.RouteConfig(
+                _i18.RouteConfig(
                   '#redirect',
                   path: '',
                   parent: SignUpProcessRoute.name,
                   redirectTo: 'sign-up-successs',
                   fullMatch: true,
                 ),
-                _i17.RouteConfig(
+                _i18.RouteConfig(
                   YourBioRoute.name,
                   path: 'your-bio',
                   parent: SignUpProcessRoute.name,
                 ),
-                _i17.RouteConfig(
+                _i18.RouteConfig(
                   PaymentMethodRoute.name,
                   path: 'payment-method',
                   parent: SignUpProcessRoute.name,
                 ),
-                _i17.RouteConfig(
+                _i18.RouteConfig(
                   UploadPhotoRoute.name,
                   path: 'upload-photo',
                   parent: SignUpProcessRoute.name,
                 ),
-                _i17.RouteConfig(
+                _i18.RouteConfig(
                   UploadPreviewRoute.name,
                   path: 'upload-preview',
                   parent: SignUpProcessRoute.name,
                 ),
-                _i17.RouteConfig(
+                _i18.RouteConfig(
                   SetLocationRoute.name,
                   path: 'set-location',
                   parent: SignUpProcessRoute.name,
                 ),
-                _i17.RouteConfig(
+                _i18.RouteConfig(
                   SignUpSuccessRoute.name,
                   path: 'sign-up-successs',
                   parent: SignUpProcessRoute.name,
                 ),
               ],
             ),
-            _i17.RouteConfig(
+            _i18.RouteConfig(
               '*#redirect',
               path: '*',
               parent: AccessWrapperRoute.name,
@@ -270,7 +283,7 @@ class XRouter extends _i17.RootStackRouter {
             ),
           ],
         ),
-        _i17.RouteConfig(
+        _i18.RouteConfig(
           '*#redirect',
           path: '*',
           redirectTo: '',
@@ -281,8 +294,8 @@ class XRouter extends _i17.RootStackRouter {
 
 /// generated route for
 /// [_i1.OnboardingPage]
-class OnboardingRoute extends _i17.PageRouteInfo<void> {
-  const OnboardingRoute({List<_i17.PageRouteInfo>? children})
+class OnboardingRoute extends _i18.PageRouteInfo<void> {
+  const OnboardingRoute({List<_i18.PageRouteInfo>? children})
       : super(
           OnboardingRoute.name,
           path: '/onboarding-page',
@@ -294,8 +307,8 @@ class OnboardingRoute extends _i17.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.AccessWrapperPage]
-class AccessWrapperRoute extends _i17.PageRouteInfo<void> {
-  const AccessWrapperRoute({List<_i17.PageRouteInfo>? children})
+class AccessWrapperRoute extends _i18.PageRouteInfo<void> {
+  const AccessWrapperRoute({List<_i18.PageRouteInfo>? children})
       : super(
           AccessWrapperRoute.name,
           path: 'access',
@@ -307,9 +320,9 @@ class AccessWrapperRoute extends _i17.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.BaseOnboarding]
-class OnboardingTab extends _i17.PageRouteInfo<OnboardingTabArgs> {
+class OnboardingTab extends _i18.PageRouteInfo<OnboardingTabArgs> {
   OnboardingTab({
-    _i18.Key? key,
+    _i19.Key? key,
     required _i3.TabOnboarding tabOnboarding,
   }) : super(
           OnboardingTab.name,
@@ -329,7 +342,7 @@ class OnboardingTabArgs {
     required this.tabOnboarding,
   });
 
-  final _i18.Key? key;
+  final _i19.Key? key;
 
   final _i3.TabOnboarding tabOnboarding;
 
@@ -341,7 +354,7 @@ class OnboardingTabArgs {
 
 /// generated route for
 /// [_i4.LoginPage]
-class LoginRoute extends _i17.PageRouteInfo<void> {
+class LoginRoute extends _i18.PageRouteInfo<void> {
   const LoginRoute()
       : super(
           LoginRoute.name,
@@ -353,7 +366,7 @@ class LoginRoute extends _i17.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i5.RegisterPage]
-class RegisterRoute extends _i17.PageRouteInfo<void> {
+class RegisterRoute extends _i18.PageRouteInfo<void> {
   const RegisterRoute()
       : super(
           RegisterRoute.name,
@@ -365,8 +378,8 @@ class RegisterRoute extends _i17.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i6.ForgotPasswordPage]
-class ForgotPasswordRoute extends _i17.PageRouteInfo<void> {
-  const ForgotPasswordRoute({List<_i17.PageRouteInfo>? children})
+class ForgotPasswordRoute extends _i18.PageRouteInfo<void> {
+  const ForgotPasswordRoute({List<_i18.PageRouteInfo>? children})
       : super(
           ForgotPasswordRoute.name,
           path: 'forgot-password',
@@ -378,8 +391,8 @@ class ForgotPasswordRoute extends _i17.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i7.SignUpProcessPage]
-class SignUpProcessRoute extends _i17.PageRouteInfo<void> {
-  const SignUpProcessRoute({List<_i17.PageRouteInfo>? children})
+class SignUpProcessRoute extends _i18.PageRouteInfo<void> {
+  const SignUpProcessRoute({List<_i18.PageRouteInfo>? children})
       : super(
           SignUpProcessRoute.name,
           path: 'sign-up-process',
@@ -391,7 +404,7 @@ class SignUpProcessRoute extends _i17.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i8.SelectContactPage]
-class SelectContactRoute extends _i17.PageRouteInfo<void> {
+class SelectContactRoute extends _i18.PageRouteInfo<void> {
   const SelectContactRoute()
       : super(
           SelectContactRoute.name,
@@ -403,7 +416,7 @@ class SelectContactRoute extends _i17.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i9.VerifyCodePage]
-class VerifyCodeRoute extends _i17.PageRouteInfo<void> {
+class VerifyCodeRoute extends _i18.PageRouteInfo<void> {
   const VerifyCodeRoute()
       : super(
           VerifyCodeRoute.name,
@@ -415,7 +428,7 @@ class VerifyCodeRoute extends _i17.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i10.NewPasswordPage]
-class NewPasswordRoute extends _i17.PageRouteInfo<void> {
+class NewPasswordRoute extends _i18.PageRouteInfo<void> {
   const NewPasswordRoute()
       : super(
           NewPasswordRoute.name,
@@ -426,8 +439,20 @@ class NewPasswordRoute extends _i17.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i11.YourBioPage]
-class YourBioRoute extends _i17.PageRouteInfo<void> {
+/// [_i11.ForgotSuccessPage]
+class ForgotSuccessRoute extends _i18.PageRouteInfo<void> {
+  const ForgotSuccessRoute()
+      : super(
+          ForgotSuccessRoute.name,
+          path: 'success',
+        );
+
+  static const String name = 'ForgotSuccessRoute';
+}
+
+/// generated route for
+/// [_i12.YourBioPage]
+class YourBioRoute extends _i18.PageRouteInfo<void> {
   const YourBioRoute()
       : super(
           YourBioRoute.name,
@@ -438,8 +463,8 @@ class YourBioRoute extends _i17.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i12.PaymentMethodPage]
-class PaymentMethodRoute extends _i17.PageRouteInfo<void> {
+/// [_i13.PaymentMethodPage]
+class PaymentMethodRoute extends _i18.PageRouteInfo<void> {
   const PaymentMethodRoute()
       : super(
           PaymentMethodRoute.name,
@@ -450,8 +475,8 @@ class PaymentMethodRoute extends _i17.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i13.UploadPhotoPage]
-class UploadPhotoRoute extends _i17.PageRouteInfo<void> {
+/// [_i14.UploadPhotoPage]
+class UploadPhotoRoute extends _i18.PageRouteInfo<void> {
   const UploadPhotoRoute()
       : super(
           UploadPhotoRoute.name,
@@ -462,8 +487,8 @@ class UploadPhotoRoute extends _i17.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i14.UploadPreviewPage]
-class UploadPreviewRoute extends _i17.PageRouteInfo<void> {
+/// [_i15.UploadPreviewPage]
+class UploadPreviewRoute extends _i18.PageRouteInfo<void> {
   const UploadPreviewRoute()
       : super(
           UploadPreviewRoute.name,
@@ -474,8 +499,8 @@ class UploadPreviewRoute extends _i17.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i15.SetLocationPage]
-class SetLocationRoute extends _i17.PageRouteInfo<void> {
+/// [_i16.SetLocationPage]
+class SetLocationRoute extends _i18.PageRouteInfo<void> {
   const SetLocationRoute()
       : super(
           SetLocationRoute.name,
@@ -486,8 +511,8 @@ class SetLocationRoute extends _i17.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i16.SignUpSuccessPage]
-class SignUpSuccessRoute extends _i17.PageRouteInfo<void> {
+/// [_i17.SignUpSuccessPage]
+class SignUpSuccessRoute extends _i18.PageRouteInfo<void> {
   const SignUpSuccessRoute()
       : super(
           SignUpSuccessRoute.name,
