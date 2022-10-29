@@ -17,7 +17,7 @@ class XImages {
   static const String backgroundDark1 = "${pathImage}background_dark_1.png";
   static const String backgroundDark2 = "${pathImage}background_dark_2.png";
 
-  // Icon
+  // Socical
   static const String google = "${pathImage}ic_google.png";
   static const String facebook = "${pathImage}ic_facebook.png";
 
@@ -27,4 +27,22 @@ class XImages {
   static const String lock = "${pathImage}ic_lock.png";
   static const String hidePassword = "${pathImage}ic_show_pw.png";
   static const String showPassword = "${pathImage}ic_hide_pw.png";
+
+  // Payment Method
+  static const String payPal = "${pathImage}ic_paypal.png";
+  static const String payPalDark = "${pathImage}ic_paypal_dark.png";
+  static const String visa = "${pathImage}ic_visa.png";
+  static const String visaDark = "${pathImage}ic_visa_dark.png";
+  static const String paynoneer = "${pathImage}ic_payoneer.png";
+  static const String paynoneerDark = "${pathImage}ic_payoneer_dark.png";
+
+  // Upload photo
+  static const String camera = "${pathImage}ic_camera.png";
+  static const String gallery = "${pathImage}ic_gallery.png";
+
+  // Location
+  static const String pinLocation = "${pathImage}ic_pin_location.png";
+
+  // Status
+  static const String success = "${pathImage}success.png";
 }

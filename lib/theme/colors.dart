@@ -13,6 +13,10 @@ class XColors {
   static const raisinBlack = Color(0xff252525);
   static const graniteGray = Color(0xff666666);
   static const veryLightMalachiteGreen = Color(0xff53E88B);
+  static const metallicOrange = Color(0xffDA6317);
+  static const pastelOrange = Color(0xfff9a84d);
+  static const gray = Color(0xff808080);
+  static const silverSand = Color(0xffC4C4C4);
 
   static const linear = LinearGradient(
       begin: Alignment.topLeft,
