@@ -45,4 +45,8 @@ class XImages {
 
   // Status
   static const String success = "${pathImage}success.png";
+
+  // Contact
+  static const String message = "${pathImage}ic_message_2.png";
+  static const String email2 = "${pathImage}ic_email.png";
 }
