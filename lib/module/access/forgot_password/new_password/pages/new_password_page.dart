@@ -6,8 +6,8 @@ import 'package:masmas_food/widgets/base_scaffold.dart';
 import 'package:masmas_food/widgets/button.dart';
 import 'package:masmas_food/widgets/input.dart';
 
-class YourBioPage extends StatelessWidget {
-  const YourBioPage({Key? key}) : super(key: key);
+class NewPasswordPage extends StatelessWidget {
+  const NewPasswordPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,30 +20,26 @@ class YourBioPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const XAppbar(
-                  title: 'Fill in your bio to get started',
+                  title: 'Reset your password here',
                   subTitle:
-                      'This data will be displayed in your account profile for security'),
+                      'Select which contact details should we use to reset your password'),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(14, 20, 14, 60),
+                  padding: const EdgeInsets.fromLTRB(14, 40, 14, 60),
                   child: Column(
                     children: [
                       XInput(
-                          value: '',
                           isDarkMode: context.isDarkMode,
-                          hint: 'First Name',
+                          value: '',
+                          hint: 'New Password',
+                          obscureText: true,
                           onChanged: (value) {},
                           errorText: ""),
                       XInput(
                           value: '',
                           isDarkMode: context.isDarkMode,
-                          hint: 'Last Name',
-                          onChanged: (value) {},
-                          errorText: ""),
-                      XInput(
-                          value: '',
-                          isDarkMode: context.isDarkMode,
-                          hint: 'Mobile Number',
+                          hint: 'Confirm Password',
+                          obscureText: false,
                           onChanged: (value) {},
                           errorText: ""),
                       const Spacer(),

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:masmas_food/widgets/base_success.dart';
 
-class SignUpSuccessPage extends StatelessWidget {
-  const SignUpSuccessPage({Key? key}) : super(key: key);
+class ForgotSuccessPage extends StatelessWidget {
+  const ForgotSuccessPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BaseSuccess(
-      labelBtn: 'Try Order',
+      labelBtn: 'Back',
       onPressed: () {},
-      subTitle: 'Your Profile Is Ready To Use',
+      subTitle: 'Password reset succesful',
     );
   }
 }

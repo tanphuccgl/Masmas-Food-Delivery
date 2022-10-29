@@ -1,4 +1,9 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:masmas_food/module/access/forgot_password/forgot_password_page.dart';
+import 'package:masmas_food/module/access/forgot_password/forgot_success/pages/forgot_success_page.dart';
+import 'package:masmas_food/module/access/forgot_password/new_password/pages/new_password_page.dart';
+import 'package:masmas_food/module/access/forgot_password/select_contact/pages/select_contact_page.dart';
+import 'package:masmas_food/module/access/forgot_password/verify_code/pages/verify_code_page.dart';
 import 'package:masmas_food/module/access/login/pages/login_page.dart';
 import 'package:masmas_food/module/access/register/pages/register_page.dart';
 import 'package:masmas_food/module/access/router/access_wrapper_page.dart';
@@ -15,6 +20,7 @@ class AccessRouters {
   static const String login = 'login';
   static const String register = 'register';
   static const String signUpProcess = 'sign-up-process';
+  static const String forgotPassword = 'forgot-password';
 }
 
 class SignUpProcessRouters {
@@ -24,6 +30,13 @@ class SignUpProcessRouters {
   static const String uploadPreview = 'upload-preview';
   static const String setLocation = 'set-location';
   static const String signUpSuccess = 'sign-up-successs';
+}
+
+class ForgotPasswordRouters {
+  static const String selectContact = 'select-contact';
+  static const String verifyCode = 'verify-code';
+  static const String newPassword = 'new-password';
+  static const String success = 'success';
 }
 
 class AccessCoordinator {
@@ -44,10 +57,37 @@ class AccessCoordinator {
           name: "RegisterRoute",
         ),
         AutoRoute(
+            path: AccessRouters.forgotPassword,
+            page: ForgotPasswordPage,
+            name: "ForgotPasswordRoute",
+            initial: true,
+            children: [
+              AutoRoute(
+                path: ForgotPasswordRouters.selectContact,
+                page: SelectContactPage,
+                name: "SelectContactRoute",
+              ),
+              AutoRoute(
+                path: ForgotPasswordRouters.verifyCode,
+                page: VerifyCodePage,
+                name: "VerifyCodeRoute",
+              ),
+              AutoRoute(
+                path: ForgotPasswordRouters.newPassword,
+                page: NewPasswordPage,
+                name: "NewPasswordRoute",
+              ),
+              AutoRoute(
+                path: ForgotPasswordRouters.success,
+                page: ForgotSuccessPage,
+                name: "ForgotSuccessRoute",
+                initial: true,
+              ),
+            ]),
+        AutoRoute(
             path: AccessRouters.signUpProcess,
             page: SignUpProcessPage,
             name: "SignUpProcessRoute",
-            initial: true,
             children: [
               AutoRoute(
                 path: SignUpProcessRouters.yourBio,

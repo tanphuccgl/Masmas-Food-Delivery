@@ -40,12 +40,14 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 15),
               XInput(
                   value: '',
+                  isDarkMode: context.isDarkMode,
                   hint: 'Email',
                   onChanged: (value) {},
                   errorText: ""),
               XInput(
                   value: '',
                   hint: 'Password',
+                  isDarkMode: context.isDarkMode,
                   onChanged: (value) {},
                   errorText: ""),
               Text(
