@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:masmas_food/config/constants/images.dart';
 import 'package:masmas_food/theme/colors.dart';
 import 'package:masmas_food/theme/styles.dart';
-import 'package:masmas_food/theme/themes.dart';
 import 'package:masmas_food/theme/ui_helper.dart';
 
 class XInput extends StatefulWidget {
@@ -14,6 +12,7 @@ class XInput extends StatefulWidget {
   final String value;
   final bool isAction;
   final String? prefixIconAssest;
+  final bool isDarkMode;
   const XInput(
       {Key? key,
       required this.value,
@@ -23,6 +22,7 @@ class XInput extends StatefulWidget {
       this.prefixIconAssest,
       this.isAction = true,
       this.obscureText = false,
+      required this.isDarkMode,
       this.textInputType = TextInputType.text})
       : super(key: key);
 
@@ -58,12 +58,18 @@ class _XInputState extends State<XInput> {
   Widget? _buildAction() {
     final List<Widget> actions = [];
 
-    if (widget.obscureText && widget.isAction) {
+    if (widget.isAction) {
       actions.add(
         IconButton(
           padding: EdgeInsets.zero,
-          icon: Image.asset(
-              obscureText ? XImages.hidePassword : XImages.showPassword),
+          icon: Icon(
+            Icons.visibility,
+            color: obscureText
+                ? XColors.veryLightMalachiteGreen
+                : (widget.isDarkMode
+                    ? XColors.davyIsGrey
+                    : XColors.raisinBlack),
+          ),
           onPressed: () {
             setState(() {
               obscureText = !obscureText;
@@ -88,12 +94,12 @@ class _XInputState extends State<XInput> {
   Widget build(BuildContext context) {
     return Container(
       decoration:
-          BoxDecoration(boxShadow: context.isDarkMode ? null : XStyles.shadow),
+          BoxDecoration(boxShadow: widget.isDarkMode ? null : XStyles.shadow),
       child: TextField(
         style: XStyles.subTitle.copyWith(
             fontSize: 14,
             color:
-                context.isDarkMode ? XColors.graniteGray : XColors.blackOlive),
+                widget.isDarkMode ? XColors.graniteGray : XColors.blackOlive),
         controller: _controller,
         onChanged: widget.onChanged,
         decoration: InputDecoration(
@@ -118,17 +124,15 @@ class _XInputState extends State<XInput> {
           disabledBorder: UIHelper.boderInput(context),
           border: UIHelper.boderInput(context),
           hintText: widget.hint,
-          fillColor: context.isDarkMode ? XColors.raisinBlack : XColors.white,
+          fillColor: widget.isDarkMode ? XColors.raisinBlack : XColors.white,
           labelStyle: XStyles.subTitle.copyWith(
               fontSize: 14,
-              color: context.isDarkMode
-                  ? XColors.graniteGray
-                  : XColors.blackOlive),
+              color:
+                  widget.isDarkMode ? XColors.graniteGray : XColors.blackOlive),
           hintStyle: XStyles.subTitle.copyWith(
               fontSize: 14,
-              color: context.isDarkMode
-                  ? XColors.graniteGray
-                  : XColors.blackOlive),
+              color:
+                  widget.isDarkMode ? XColors.graniteGray : XColors.blackOlive),
           contentPadding: const EdgeInsets.all(20),
         ),
         keyboardType: widget.textInputType,

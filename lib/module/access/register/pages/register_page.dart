@@ -43,18 +43,21 @@ class RegisterPage extends StatelessWidget {
                 const SizedBox(height: 40),
                 XInput(
                     value: '',
+                    isDarkMode: context.isDarkMode,
                     hint: 'Username',
                     onChanged: (value) {},
                     prefixIconAssest: XImages.profile,
                     errorText: ""),
                 XInput(
                     value: '',
+                    isDarkMode: context.isDarkMode,
                     hint: 'Email',
                     onChanged: (value) {},
                     errorText: "",
                     prefixIconAssest: XImages.email),
                 XInput(
                     value: '',
+                    isDarkMode: context.isDarkMode,
                     hint: 'Password',
                     prefixIconAssest: XImages.lock,
                     obscureText: true,

@@ -18,6 +18,7 @@ class XColors {
   static const gray = Color(0xff808080);
   static const silverSand = Color(0xffC4C4C4);
   static const oldSilver = Color(0xff828282);
+  static const davyIsGrey = Color(0xff535353);
 
   static const linear = LinearGradient(
       begin: Alignment.topLeft,
