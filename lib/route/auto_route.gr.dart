@@ -183,7 +183,7 @@ class XRouter extends _i18.RootStackRouter {
               '#redirect',
               path: '',
               parent: AccessWrapperRoute.name,
-              redirectTo: 'forgot-password',
+              redirectTo: 'register',
               fullMatch: true,
             ),
             _i18.RouteConfig(
