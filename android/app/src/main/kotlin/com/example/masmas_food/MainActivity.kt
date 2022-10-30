@@ -1,4 +1,4 @@
-package com.example.masmas_food
+package com.levi.masmas_food
 
 import io.flutter.embedding.android.FlutterActivity
 
