@@ -55,12 +55,12 @@ class AccessCoordinator {
           path: AccessRouters.register,
           page: RegisterPage,
           name: "RegisterRoute",
+          initial: true,
         ),
         AutoRoute(
             path: AccessRouters.forgotPassword,
             page: ForgotPasswordPage,
             name: "ForgotPasswordRoute",
-            initial: true,
             children: [
               AutoRoute(
                 path: ForgotPasswordRouters.selectContact,
