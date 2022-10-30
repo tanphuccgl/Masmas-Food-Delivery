@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "807808861681",
+    "project_id": "masmas-784f9",
+    "storage_bucket": "masmas-784f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807808861681:android:e3a09963c18b34e8733050",
+        "android_client_info": {
+          "package_name": "com.levi.masmas_food"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "807808861681-hoqrrbiiv90pobc24sdrb55qpoo2e4lv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNHOnPqRAwZVh630lPFunPwabF8Vi5qPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "807808861681-hoqrrbiiv90pobc24sdrb55qpoo2e4lv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

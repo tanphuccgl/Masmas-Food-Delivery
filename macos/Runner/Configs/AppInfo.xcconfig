@@ -8,7 +8,7 @@
 PRODUCT_NAME = masmas_food
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.masmasFood
+PRODUCT_BUNDLE_IDENTIFIER = com.levi.masmasFood
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2022 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2022 com.levi. All rights reserved.
